@@ -1,0 +1,266 @@
+\section{Preface: Instructions on Writing}
+
+\subsection{General instructions}
+\begin{itemize}
+\item  Never use other people's ideas/text/images without citing and clarifying copyright issues. 
+
+\item  Analyze the papers you read with respect to their style.	
+
+\item  Start with a logical structure, do exact formulations later.
+
+\item  Have someone revise your paper.
+
+\item  Polish your abstract. Many readers will read only this.
+
+\end{itemize}
+
+\subsection{Structure}
+\begin{itemize}
+\item  Create a table of contents during drafting, even if it is not needed for the final version. % Use the command \tableofcontents}for that purpose. 
+Readers should quickly know where to find which information, so strive for ``mutually exclusive'' headings.
+
+\item  Strive for symmetry in terms of number and length of sections per chapter, or of subsections per section (introduction/conclusion are exceptions with less subheadings). 
+
+\item  Do not place chunks of ``loose'' text between section heading and subsection heading. One or two sentences are possible, but only for an overview of the entire section.
+
+\item  A section cannot contain only a single subsection.
+
+\item Do not skip heading levels.
+
+\item  Avoid any more than three levels (section, subsection, subsubsection). If you need to split at a deeper level, revise your structure.
+
+\item  Each paragraph should contain one distinct idea/message. Also, the reader should see the paragraph's topic in the first three words, but at least in the first sentence.
+
+\item  Ensure logical connection within and between paragraphs. It is easiest to write down the main ideas first, and only then to expand them to paragraphs.
+
+\item  Do not get creative with different types of line breaks between paragraphs. If you find that necessary, revise your structure.
+
+\end{itemize}
+
+\subsection{Language}
+\begin{itemize}
+	
+	\item  Write in short and concise sentences. 
+	
+%	\item  Be conscious about use of first person (``I'' and ``we'').
+	
+	\item  Do not use contractions (don't) or colloquial speech.
+	
+	\item  Avoid static verbs and passive tense; try to write actively. As an exercise, start by replacing all forms of ``to be'' in your first two paragraphs with an active construction. %(just replacing the word, with terms like ``exist'', does not make it better).
+	
+\item  Look up the rules for hyphenation in English, particularly for ``compound modifiers'', to know the difference between a ``red haired person'' and a ``red-haired person''.
+
+\item  Look up the rules for which/that (including punctuation).
+
+\item  Whenever you look something up (like grammar rules), do not trust newsgroups or other sources like that. Get a reliable source, e.g. a book.
+
+\item  Try to use only English words you know! 
+
+\item  \href{https://www.merriam-webster.com/}{Merriam-Webster} helps with spelling and hyphenation.
+\end{itemize}
+
+\subsection{Citations}
+\begin{itemize}
+\item  When writing your thesis or any document that is (or could be) disseminated in any way, have \emph{all} of your figures free of any copyright issues. That means: Either draw it yourself (entirely, taking pieces from other pictures and modifying these is also an issue) or obtain permission and state in the figure caption that you got this permission and from whom. Mostly publishers will tell you how to write it and even have an automated process to get permission, for example via RightsLink/Copyright Clearance Center (mostly instantaneous and free for students' theses). Also pictures from the public domain need proper referencing. There are also different types of licenses, for example some do not allow modifications to a picture.
+
+\item  Avoid direct citation (``...'') whenever possible, instead rephrase statements when citing
+
+\item   It is clearly preferred to cite primary, original literature, not reviews or textbooks. Go back to the original sources. If you cite reviews or books, do that in an explicit way, such as ``an overview is found in...''.
+
+\item  Read until you understand each paper you are citing, or at least the portion of the paper you are referring to. Do not just rely on abstracts or, worse, secondary literature that cites the original source (often incorrectly). %If you feel it is impossible to read and understand cited references, narrow down the scope of your work until it is.
+
+\item Provide evidence for each single claim that is not an obvious fact, either in the form of a reference, or by your own experiment, deduction, or calculation. 
+
+\end{itemize}
+
+\subsection{Math}
+\begin{itemize}
+	
+	\item Define each single variable variable explicitly. Do not rely on ``self-explaining'' indices like $x_{\mathrm{max}}$ or on the reader's background experience (for example to assume that $F$ must be a force). Choose short indices, rather one than multiple letters. 
+	
+
+\item Operators and common mathematical functions are typeset upright~\cite{RedBook2010}. This is particularly often done wrong with the differential operator, or with sin and cos. Example: The derivative of variable $x$ with respect to time $t$ is
+\begin{equation}
+\dot{x}=\frac{\ud x}{\ud t} \, .
+\label{eq:derivative}
+\end{equation}
+
+\item Everything that is text should \emph{not} be typeset as variables. This also holds for indices of variables. For example, for a variable $\lambda$ with intended index ``m'', where ``m'' is an abbreviation of ``max'', write $\lambda_{\mathrm{m}}$ and not $\lambda_m$.
+
+\item Units: It is a very frequent mistake to put square brackets around the unit. This is \emph{incorrect} according to the SI~\cite{SIbrochure2006} and the ISO norm~\cite{ISOnormunits}. Example: For a force $F$, correct use of the operator is: $[F]=\si{N}$. For axes labels in plots, use division as in ``$F/\si{N}$'' (preferred), or ``force $F$ (in \si{N})''. %ISO80000-1:2009 Quantities and units - Part 1: General, available at https://www.iso.org/obp/ui/#iso:std:iso:80000:-1:ed-1:v1:en.
+
+\item Units are typeset roman (upright), not italics (sloping).
+
+\item The space between a number and a unit should be slightly less than a normal space. %In \LaTeX, use ``\textbackslash ,'' or the package {\tt units} to ensure both correct spacing and typesetting. 
+Example: moment $M=\SI{3}{N.m}$.%Note the use of the "." in this package to create the appropriate space between two units (denoting multiplication). If you wonder why this is needed, consider the ambiguous case of "3 ms". Is this "3 milliseconds" or is it "3 meters times seconds"? Alternatively, one can use \cdot to explicitly multiply.
+
+\item Be aware that also controller gains have units! Report them in the paper. Understanding the units also helps you choose reasonable gains during tuning.
+
+\item Do not use ``$\ast$'' to indicate multiplication (Reserve this operator for convolution). Use no operator between variables, or ``$\cdot$'' if needed. Example: $F=ma=\SI{3}{kg}\cdot\SI{2}{m/s^2}$.
+
+\item Do not start sentences with numbers or variable names. Sometimes, it helps to put constructions like ``The parameter $k$'' or ``The variable $x$'' or ``A value of 20...''.
+
+\item Typeset scalars, vectors, and matrices differently. Example:
+The mass matrix $\M M_{\mathrm{r}}(\V{q})$ of a robotic manipulator is a function of the robot's generalized coordinates~$\V{q}$.
+%To enable this, use
+%\newcommand{\V}[1]{\boldsymbol{#1}}%vectors
+%\newcommand{\M}[1]{\mathbf{#1}}%matrices
+%in the preamble of your document.
+
+\item Make formulae part of sentences. Place full stops when a sentence ends after your equation, or a comma when appropriate. See the above example equation \eqref{eq:derivative}. %Another example: $\V{F}=m \V{a}$, with $m$....
+
+% Example for how to reference an equation: With~(\ref{eq:derivative}), ...
+\end{itemize}
+
+
+\subsection{Figures}
+\begin{itemize}
+\item Reference all figures and tables in the text, before their occurrence.
+
+\item Use vector graphics whenever possible; do not rasterize text. You can export figures as {\tt .eps} from Matlab.
+
+\item Make sure your figures are all perfectly readable in b/w printing and by colorblind people. So, do not (only) color-code information, but use different linestyles or thicknesses or grayscales.
+
+\item All text in figures should be readable without zoom, also by elderly readers. So, do not use font sizes any smaller than footnotesize. 
+
+\item Use the same font for symbols in figures as you use in your main text. A package that helps here is {\tt psfrag}. %It replaces text in your figures by text or variables of your choice during compilation. Remark: If you use Illustrator, the package works best if you save a version of your file in a legacy format (e.g. Illustrator 3). 
+Example: A disk will change its angular velocity $\omega$ when an external torque $\tau$ acts on it~(Fig.~\ref{fig:diskwithtorque}). %Always reference figures in your text.
+%This figure demonstrates how to use the psfrag command. 
+\begin{figure}[htb]
+	\psfrag{d}[l][l]{\sf disk} %sf means sans serif, preferred style in illustrations
+	\psfrag{tauj}[c][c]{\sf $\tau$} %sf has no effect in math mode
+	\psfrag{phidj}[c][c]{\sf $\omega$}
+	\psfrag{rj}[c][c]{\sf $r$}
+	\centering
+	\includegraphics[width=0.3\linewidth]{figures/Discwithtorque.eps}
+	\caption[Short title]{An actuator torque $\tau$ acts on a disk of radius $r$, causing the disk to change its angular velocity $\omega$ (Try scaling the figure and observe font size).
+	}
+	\label{fig:diskwithtorque}
+\end{figure}
+\item When drawing block diagrams, follow IEC notation~\cite{IECControltech}. Examples: Use circles for summing points, position algebraic signs at the \emph{right side} of incoming action lines, use dots for branching points, use rectangular blocks.
+
+\end{itemize}
+
+\subsection{Further Writing Resources}
+\begin{itemize}
+	\item Comments in the {\tt.tex}-file of this document
+\item \href{https://tobi.oetiker.ch/lshort/lshort.pdf}{T.~Oetiker: The Not So Short Introduction to \LaTeXe}
+\item \href{https://owl.english.purdue.edu/owl/}{Purdue Online Writing Lab}
+%and some more:
+%\item \href{http://abacus.bates.edu/~ganderso/biology/resources/writing/HTWsections.html#abstract}{Introduction to Journal-Style Scientific Writing}
+%\item \href{http://grammar.ccc.commnet.edu/grammar}{Guide to English Grammar and Writing}
+%\item \href{http://ras.papercept.net/conferences/support/tex.php}{IEEE RAS support}
+%\item IEEE style manual:
+%http://www.ieee.org/portal/cms_docs_iportals/iportals/publications/authors/transjnl/stylemanual.pdf
+
+\end{itemize}
+
+
+%\end{comment}%use this to make the instructions invisible but keep them in the tex file.
+
+
+
+%------------------------------------------------------------------------------
+%ABSTRACT:
+%------------------------------------------------------------------------------
+\newpage
+\begin{abstract}
+Brief summary, about one sentence per section. 
+\end{abstract}
+
+%Use this command to check your structure:
+%\tableofcontents
+
+%------------------------------------------------------------------------------
+%INTRODUCTION:
+%------------------------------------------------------------------------------
+
+\section{Introduction}
+
+
+\begin{itemize}
+\item What is the context / motivation of your work?
+
+
+\item What is the State of the Art? Cite relevant literature.
+%EXAMPLE FOR CITATIONS: 
+%Example for a citation: The principle of complementary limb motion estimation assumes that an individual's movement intention for missing or paralyzed limbs can be estimated from residual body motion~\cite{ValTNSRE2008}.
+%remark: "~" prevents a line break
+
+\item What is missing in the literature? 
+\item What is the research question?
+
+\item What is your new contribution?
+\end{itemize}
+
+
+
+%------------------------------------------------------------------------------
+%METHODS:
+%------------------------------------------------------------------------------
+\section{Methods}
+
+The methods section contains the recipe that allows others to reproduce your results, without reading the results section. 
+So, here you answer questions like:
+\begin{itemize}
+\item How do you design your device/your controller? % The latter could e.g. be put in a \subsection{Control Design}
+\item How do you design experiments/simulations? % E.g. \subsection{Experimental Protocol}
+\item How do you collect and analyze data? % E.g. \subsection{Data Acquisition}, \subsection{Data Analysis}
+\end{itemize}
+Choose descriptive names for new methods (instead of words like ``novel''), to simplify citation and future improvements.
+
+
+
+%------------------------------------------------------------------------------
+%RESULTS:
+%------------------------------------------------------------------------------
+
+
+ \section{Results}
+ How does your method perform? 
+ Give quantitative information and illustrate with plots. 
+  
+ Do not give extra information on your methods in the results section (such as method to choose parameters, or the experimental protocol). 
+ 
+ Give the raw facts only; do not interpret your results yet. That means no sentences like: ``The improved performance demonstrates that the controller is effective...'' or ``A probable reason for this observation is...''. 
+
+%Example for a Matlab plot (uncomment to see):
+\begin{comment}
+Example: The three conditions exhibit a significantly different force... (Fig.~\ref{fig:boxplot}).
+%This figure shows a Matlab plot, exported to eps
+\begin{figure}[hb]
+\psfrag{intt}[t][c]{ $F$/\si{N}}
+\psfrag{ZIm}[t][b]{\sf A}
+\psfrag{Elast}[t][b]{\sf B}
+\psfrag{Com}[t][b]{\sf C}
+\psfrag{5}[r][r]{\sf 5}
+\psfrag{10}[r][r]{ \sf 10}
+\psfrag{15}[r][r]{\sf 15}
+\psfrag{20}[r][r]{\sf 20}
+\centering
+\includegraphics[width=0.3\textwidth]{figures/boxplot.eps}
+\caption[Boxplot]{Force $F$ for the conditions $A$, $B$, and $C$.}
+\label{fig:boxplot}
+\end{figure}
+%
+\end{comment}
+%------------------------------------------------------------------------------
+%DISCUSSION:
+%------------------------------------------------------------------------------
+
+ \section{Discussion}
+ Interpret your results. Is the performance acceptable? Go back to initial questions, compare to other methods reported in literature. How do you explain unexpected results? Which shortcomings or limitations are there in your methods and results? Where is room for improvement? Could combination with methods from literature further improve the work? Mention plans, needs, and recommendations for future research. %This may also be a separate subsection ``Future Work''.
+
+%------------------------------------------------------------------------------
+%CONCLUSION:
+%------------------------------------------------------------------------------
+ \section{Conclusion}
+ This is not a summary. Instead, state the take-home message.
+
+
+%------------------------------------------------------------------------------
+%ACKNOWLEDGMENTS:
+%------------------------------------------------------------------------------
+\section*{Acknowledgments}
+Thank everyone who contributed with smaller pieces of advice or non-scientifically (e.g.\ technical support).
+%Example: The authors would like to thank [...]

@@ -1,0 +1,194 @@
+%%Template file
+%Heide Brandtstaedter, h.brandtstaedter@htw-berlin.de
+%13.7.2010, Berlin. Last update June 2022, Delft.
+%Be careful:  Some packages may be outdated.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  style definitions  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% matrices
+\newcommand{\stylematrix}[1]{\boldsymbol{\mathrm{#1}}}
+% sets
+\newcommand{\styleset}[1]{\mathit{#1}}
+% scalars
+\newcommand{\stylescalar}[1]{\mathit{#1}}
+% vectors
+\newcommand{\stylevector}[1]{\boldsymbol{#1}}
+%\newcommand{\stylevector}[1]{\boldsymbol{\mathit{#1}}}
+% subscript
+\newcommand{\substyle}[1]{\mathrm{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  command definition  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ct}{\ensuremath{\stylescalar{t}}}
+\newcommand{\cn}{\ensuremath{\stylescalar{n}}}
+
+\newcommand{\cx}{\ensuremath{\stylevector{x}}}	
+\newcommand{\cA}{\ensuremath{\stylematrix{A}}}	
+\newcommand{\cB}{\ensuremath{\stylematrix{B}}}	
+\newcommand{\cC}{\ensuremath{\stylematrix{C}}}	
+\newcommand{\cD}{\ensuremath{\stylematrix{D}}}	
+\newcommand{\cG}{\ensuremath{\stylematrix{G}}}	
+
+\newcommand{\cu}{\ensuremath{\stylevector{u}}}	
+\newcommand{\cf}{\ensuremath{\stylevector{f}}}	
+\newcommand{\cz}{\ensuremath{\stylevector{z}}}
+\newcommand{\cy}{\ensuremath{\stylevector{y}}}
+\newcommand{\cg}{\ensuremath{\stylevector{g}}}	
+\newcommand{\cv}{\ensuremath{\stylevector{v}}}	
+\newcommand{\cd}{\ensuremath{\stylevector{d}}}	
+\newcommand{\cm}{\ensuremath{\stylevector{m}}}	
+\newcommand{\ce}{\ensuremath{\stylevector{e}}}	
+\newcommand{\cS}{\ensuremath{\stylevector{S}}}	
+
+\newcommand{\einsmat}{\stylematrix{1}}
+\newcommand{\nullmat}{\stylematrix{0}}
+%\newcommand{\nullmat}{\stylematrix{0}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%spezielle math. Konstrukte:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\diff}{\mathrm{d}}
+\newcommand{\diffdt}{\frac{\mathrm{d}}{\mathrm{d}t}}
+\newcommand{\lie}[2]{\mathcal{L}_{#1}{#2}} 
+\def\argmin{\mathop{\rm argmin} \limits} 		%Gütefunktional
+\newcommand{\ddt}[0]{\frac{\mathrm{d}}{\mathrm{d}t}}
+\renewcommand{\d}[0]{\mathrm{d}}
+\newcommand{\dt}[0]{\mathrm{d}t}
+\newcommand{\const}[0]{\mathrm{const}}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\bmat}[1]{\begin{bmatrix} #1 \end{bmatrix}}
+\newcommand{\halmos}{\rule{2.0mm}{2.0mm} }
+\newcommand{\laplace}{\circ\hspace{-0.15cm}-\hspace{-0.15cm}-\hspace{-0.15cm}\bullet\:}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%mathematische Zeichenzusaetze
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\ul}{\underline}
+\newcommand{\ol}{\overline}
+\newcommand{\ds}{\displaystyle}
+\def\ODelta{\mathop{\Delta}\limits}
+\newcommand{\bm}[1]{\mbox{\boldmath ${#1}$}}
+\newcommand{\ve}[1]{\underline{#1}}\newcommand{\ma}[1]{#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Worte in Formeln
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\cand}{\ensuremath{\textnormal{and}\,}}	
+\newcommand{\cwith}{\ensuremath{\textnormal{with}\,}}	
+\newcommand{\cmit}{\ensuremath{\textnormal{mit}\,}}	
+\newcommand{\csign}{\ensuremath{\,\textnormal{sign}}}	
+\newcommand{\cfor}{\ensuremath{\textnormal{for}\,}}	\newcommand{\cfuer}{\ensuremath{\textnormal{für}\,}}	\newcommand{\cund}{\ensuremath{\textnormal{und}\,}}	
+\newcommand{\ckonstant}{\ensuremath{\textnormal{constant}\,}}	
+\newcommand{\crange}{\ensuremath{\textnormal {range}}}
+\newcommand{\crang}{\ensuremath{\textnormal {rank}}}
+\newcommand{\csat}{\ensuremath{\textnormal {sat}}}
+\newcommand{\cmax}{\ensuremath{\textnormal {max}}}
+\newcommand{\crank}{\ensuremath{\textnormal {rank}}}
+\newcommand{\cdim}{\ensuremath{\textnormal {dim}}}
+\newcommand{\cdet}{\ensuremath{\textnormal {det}}}
+\newcommand{\cmm}{\ensuremath{\textnormal {mm}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Mengen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\RZ}{\mathbb{R}}
+\newcommand{\NZ}{\mathbb{N}}
+\newcommand{\CZ}{\mathbb{C}}
+
+\newcommand{\NewR}{{\rm I\hspace{-.17em}R}}
+\newcommand{\NewB}{{\rm I\hspace{-.17em}B}}
+\newcommand{\NewZ}{{\sf Z\hspace{-.25em}Z}}
+\newcommand{\NewN}{{\rm I\hspace{-.17em}N}}
+\newcommand{\Reel}{\NewR}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Referenzen 	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\fref}[1]{Abb. \ref{fig:#1}}
+\newcommand{\tref}[1]{Tab. \ref{tab:#1}}
+\newcommand{\mref}[1]{(\ref{eq:#1})}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  spezielle Konstrukte  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%sliding mode etc
+\newcommand{\cSO}{\ensuremath{S_0}}			            %Schaltflaeche
+\newcommand{\csplus}{\ensuremath{\stylevector {f}^+(\cx)}}
+\newcommand{\csminus}{\ensuremath{\stylevector {f}^-(\cx)}}
+\newcommand{\cw}{\ensuremath{\stylescalar{\theta}}}	
+\newcommand{\cwref}{\ensuremath{\stylescalar{\theta}^*}}	
+\newcommand{\Tsam}{\ensuremath{\stylescalar{T}_{sample}}}	
+
+%Observer-Abkürzungen
+\newcommand{\cxob}{\ensuremath{\hat{\stylevector{x}}}}	
+\newcommand{\cAob}{\ensuremath{\hat{\stylematrix{A}}}}	
+\newcommand{\cBob}{\ensuremath{\hat{\stylematrix{B}}}}	
+\newcommand{\cfob}{\ensuremath{\hat{\stylevector{f}}}}	
+\newcommand{\cyob}{\ensuremath{\hat{\stylevector{y}}}}
+\newcommand{\cgob}{\ensuremath{\hat{\stylevector{g}}}}	
+\newcommand{\cGob}{\ensuremath{\hat{\stylematrix{G}}}}	
+\newcommand{\clambdaalphaobs}{\ensuremath{\hat{\stylescalar{\lambda}}_{\alpha r}}}
+\newcommand{\clambdabetaobs}{\ensuremath{\hat{\stylescalar{\lambda}}_{\beta r}}}
+\newcommand{\clambdaalphaerr}{\ensuremath{\overline{\stylescalar{\lambda}}_{\alpha r}}}
+\newcommand{\clambdabetaerr}{\ensuremath{\overline{\stylescalar{\lambda}}_{\beta r}}}
+\newcommand{\clambdaalpha}{\ensuremath{\stylescalar{\lambda}}_{\alpha r}}
+\newcommand{\clambdabeta}{\ensuremath{\stylescalar{\lambda}}_{\beta r}}
+
+%Abkürzungen Kap."'flexible"'
+\newcommand{\cTt}{\ensuremath{T_L(t)}}
+\newcommand{\cTu}{\ensuremath{T_L(t-2\tau)}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Umgebungen 		   %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%DEFINITIONS- UMGEBUNG
+\newcounter{defctr}
+\renewcommand{\thedefctr}{\arabic{section}.\arabic{defctr}}
+\newenvironment{definition}[1]
+  	{\refstepcounter{defctr} \vspace*{1em}
+    {\noindent \sffamily \bfseries{Definition \thedefctr :}} \emph{#1.} \\}
+
+%MOTIVATONS- UMGEBUNG
+\newenvironment{motivation}
+  {\centering \hspace*{0.07\textwidth}
+    \begin{minipage}{0.85\textwidth} \itshape \vspace{0.4cm}}
+  {\end{minipage} \vspace{1cm}}
+%
+%HEIDES BEISPIELE (numeriert)
+\newcounter{exctr}
+\renewcommand{\theexctr}{\arabic{section}.\arabic{exctr}}
+
+\newenvironment{example}[1]
+{\small
+{\refstepcounter{exctr} \vspace*{1em}
+{\noindent \sffamily \bfseries Example \theexctr} {\sffamily \bfseries{(#1)}}} \\}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  MY DECLARIONS damit's schoener aussieht 		   %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\DeclareFixedFont{\BildFont}{OT1}{cmss}{m}{n}{10}
+\newtheorem{intrem}{\hspace*{-0.8cm}$\Longrightarrow$ \footnotesize TODO}
+
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Ende       		   %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+

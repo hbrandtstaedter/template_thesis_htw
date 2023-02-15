@@ -1,0 +1,61 @@
+%%Template file
+%Heide Brandtstaedter, h.brandtstaedter@htw-berlin.de
+%13.7.2010, Berlin. Last update June 2022, Delft.
+%Be careful:  Some packages may be outdated.
+
+
+\usepackage{amsmath, amssymb, amsfonts}   %LATEX-Mathematik-Formatierungen 
+\usepackage{url, hyperref}  %für Hyperlinks, Inernet-Adressen im Literaturverzeichnis zitieren
+
+%Sprachpakete deutsch
+\usepackage[T1]{fontenc}	%automatische Silbentrennung  
+\usepackage[ngerman, english]{babel}	%Neue Rechtschreibung
+
+%Einbindung von Graphiken
+\usepackage{graphicx}								
+\usepackage{psfrag}					%Text in Graphiken einbinden
+\usepackage{pstricks}
+\usepackage{pictexwd}
+%\usepackage{epic}
+\usepackage{rotating}
+
+\usepackage{verbatim}       %Code TExt Umgebung
+
+%?
+\usepackage{tikz}
+\usetikzlibrary{matrix, fit}
+\usetikzlibrary{backgrounds}
+
+\usepackage{empheq}       % Hervorhebung von Gleichungen, Teil vom Bündel »mathtools«
+
+%für extra schmale Abstände in Überschriften in den Übungsblätter:
+%\usepackage{titlesec}
+
+
+%%%%%%%%%%%%%%%%%%%
+%ggf von NIS
+%\usepackage{tikz}
+%\usetikzlibrary{arrows}
+%\usepackage{placeins}
+%\definecolor{schrift}{cmyk}{.4,1,1,0}
+%%%%%%%%%%%%%%%%%%%%%%
+
+%von Heike
+%if you want to put several images into one figure:
+\usepackage{subfigure}
+\newcommand{\goodgap}{%for subfigure package
+\hspace{\subfigtopskip}%
+\hspace{\subfigbottomskip}}
+
+% Formatierung fuer HTW Thesis
+%\documentclass[11pt,a4paper,oneside]{scrartcl}
+\usepackage[left=2.5cm,right=2.5cm,top=2.0cm,bottom=2.5cm]{geometry}%Einstellungen der Seitenränder		
+\usepackage{setspace}				%Zeilenabstände
+\usepackage[bottom,hang]{footmisc}	%Formatierung Fußnoten
+
+
+%THESIS ERGAENZUNG (OL)
+%Paket für erweiterete Tabellenumgebung TabularX
+\usepackage{tabularx}													
+\usepackage{multirow}%verbundene Zellen und Spalten
+\usepackage{booktabs}%verbesserte Optik von Tabellen (midrule, toprule, etc)

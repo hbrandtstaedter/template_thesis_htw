@@ -1,0 +1,81 @@
+\documentclass[11pt,a4paper,oneside]{scrartcl}
+
+
+\input{../makro_header}
+%\input{../format_thesis}
+
+
+\begin{document}
+
+%\input{../makro_style}
+
+\selectlanguage{ngerman}
+
+%---------------------
+% Titelseite
+\input{title}
+
+%---------------------
+% Abstract
+\newpage
+\input{abstract}
+
+%---------------------
+% Inhalts und Abbildungsverzeichnis
+
+% Römischen Ziffern
+\pagenumbering{Roman} 
+% Inhaltsverzeichnis
+\newpage
+
+%%%%%%%%%%%%%%%%%weg weil fehler...
+\tableofcontents
+%\newpage
+%% Abbildungsverzeichnis
+\listoffigures 
+\listoftables
+%\newpage
+
+
+%---------------------
+% Inhalt
+\pagenumbering{arabic} % Umstellung auf Arabische Ziffern
+
+\input{vorwort}
+
+\input{einleitung}
+\input{ablauf}
+
+\input{writing}
+%\input{formulas}
+%\input{heike}
+
+%\input{kolloquium}
+
+%\input{bewertung}
+
+%\input{zusammenfassung}
+
+
+
+
+https://www.f1.htw-berlin.de/studieren/abschlussarbeit/
+
+%---------------------------
+\pagenumbering{Roman} 
+% Anhang
+\newpage
+\input{latex}
+\input{tools}
+\newpage
+
+%--------------------------
+% Literaturverzeichnis
+\bibliographystyle{abbrvdin}
+\bibliography{literatur_hb}
+
+\input{eid}
+
+
+
+\end{document}
