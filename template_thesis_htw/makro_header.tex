@@ -31,6 +31,8 @@
 %für extra schmale Abstände in Überschriften in den Übungsblätter:
 %\usepackage{titlesec}
 
+%für Zitierstyles
+\usepackage[authoryear]{natbib}
 
 %%%%%%%%%%%%%%%%%%%
 %ggf von NIS
@@ -59,3 +61,11 @@
 \usepackage{tabularx}													
 \usepackage{multirow}%verbundene Zellen und Spalten
 \usepackage{booktabs}%verbesserte Optik von Tabellen (midrule, toprule, etc)
+
+%some formatting changes to move header and footer position manually to the right spot:
+\usepackage{fancyhdr}
+\renewcommand{\headrulewidth}{0pt}%potential line between header and body
+\addtolength{\headheight}{1.2 cm}%more space for header
+\addtolength{\headsep}{-.3 cm}%pull body up
+\addtolength{\footskip}{-.5 cm}%pull footer up
+%see the doc1ument https://tobi.oetiker.ch/lshort/lshort.pdf, page 115 for definition of main formatting variables

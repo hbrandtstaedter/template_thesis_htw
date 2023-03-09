@@ -1,105 +1,16 @@
-\subsection{Mathematik}
-\cite{Volker12}
-\subsubsection{Gültige Normen}
-Zur Schreibweise von Formeln gibt es gültige Normen, die in wissenschaftlichen Arbeiten an der HTW Berlin zu beachten sind:
-\begin{itemize}
-    \item DIN 1338 Formelschreibweise und Formelsatz
-\item DIN 1304 Formelzeichen
-\item DIN 1301 Einheitennamen, Einheitenzeichen
-\item DIN 1313 Größen
-\end{itemize}
-
-\subsubsection{Formelsatz}
-Die Normen regeln klar, welche Buchstaben für Größen und Einheiten zu verwenden und wie Formeln darzustellen sind. Dabei ist auch geregelt, welche Zeichen gerade und welche kursiv zu setzen sowie wo Leerzeichen einzufügen
-sind.
-Es existiert der allgemeine Glaube, dass Formeleditoren von Textverarbeitungsprogrammen wie MS-Word automatisch die Formeln korrekt setzen. Wer sich darauf verlässt, wird einiges erreichen. Korrekt geschriebene Formeln werden
-aber sicher nicht dazu gehören. Der Formelsatz muss stets manuell angepasstwerden.
-Die wichtigsten Regeln für einen korrekten Formelsatz sind im Folgenden zusammengefasst.
-\begin{itemize}
-    \item Variablen und Größen werden kursiv gesetzt
-\item Zahlen und Einheiten werden gerade gesetzt
-\item Zwischen Variable und Einheit steht immer ein Leerzeichen. 
-\end{itemize}
-Ausnahmen: Beim Prozent-Zeichen (\%) kann das Leerzeichen wahlweise stehen oder entfallen.
-Bei Winkelbezeichnungen und Gradangaben (°) entfällt das Leerzeichen.
-Beispiele
-\begin{align*}
-    220\,\textnormal{V}\\
-    220\,\textnormal{V} \cdot 5\,\textnormal{A}=1100\,\textnormal{W}\\
-    1,1\,\textnormal{kW}\\
-    5\%\\
-5,7°\\
-\end{align*}
-
-Indizes werden gerade gesetzt, wenn sie die Variable näher bezeichnen. Lediglich variable Indizes werden kursiv gesetzt.
-
-Beispiele für bezeichnende Indizes
-\begin{itemize}
-    \item $37,5\,$ V (Leerlaufspannung)
-\item $99,9\,$ W (MPP-Leistung)
-\item $14°$ (maximale Sonnenhöhe im Winter)
-\end{itemize}
-
-
-
-Formelschreibweise und Formelsatz in wissenschaftlichen Arbeiten 2
-Beispiel für bezeichnende und variable Indizes
-
-\begin{itemize}
-    \item xx
-\end{itemize}
-
-Die mathematischen Konstanten $\pi$, $e$ und $i$, mathematische Funktionen wie $\sin$, $\cos$, $\tan$, $\lim$, $\ln$, sowie Summen- und Integralzeichen werden gerade gesetzt.
-Beispiele
-\begin{itemize}
-    \item $\pi$
-\item $i$
-\item $\sin$
-\item ln
-\end{itemize}
-
-Chemische Formelzeichen und Abkürzungen werden gerade gesetzt.
-Beispiele
-\begin{itemize}
-    \item HSO (Schwefelsäure)
-\item CHO (Ethanol)
-\item WKA (Windkraftanlage)
-\item MPP (Maximum Power Point)
-\end{itemize}
-
+\subsection{Formelsatz}
+\label{sec:formulas}
 
 
 
 \begin{itemize}
-	
-
-	
-	\item Definieren Sie jede einzelne Variable explizit. Verlassen Sie sich nicht auf ``selbsterklärende'' Indizes wie $x_{\mathrm{max}}$ oder auf den Erfahrungshintergrund des Lesers (z.B. um anzunehmen, dass $I$ ein elektrischer Strom sein muss). Wählen Sie kurze Indizes, lieber einen als mehrere Buchstaben. 
-	
-
-\item Operatoren und gängige mathematische Funktionen werden im Hochformat gesetzt~\cite{RedBook2010}. Besonders häufig wird dies bei dem Differentialoperator oder bei sin und cos falsch gemacht. Beispiel: Die Ableitung der Variablen $x$ nach der Zeit $t$ ist
-\begin{equation}
-\dot{x}=\frac{\d x}{\ud t} \, .
-\label{eq:derivative}
-\end{equation}
-
-\item Alles, was Text ist, sollte nicht als Variablen gesetzt werden. Dies gilt auch für Indizes von Variablen. Zum Beispiel, für eine Variable $\lambda$ mit dem beabsichtigten Index ``m'', wobei ``m'' eine Abkürzung für ``max'' ist, schreiben Sie $\lambda_{\mathrm{m}}$ und nicht $\lambda_m$.
-
-\item-Einheiten: Es ist ein sehr häufiger Fehler, eckige Klammern um die Einheit zu setzen. Dies ist nach der SI~\cite{SIbrochure2006} und der ISO-Norm~\cite{ISOnormunits} nicht korrekt. Beispiel: Für eine Kraft $F$ ist die korrekte Verwendung des Operators: $[F]=\,{N}$. Für Achsenbeschriftungen in Diagrammen ist die Division wie in ``$F/\,{N}$'' (bevorzugt) oder ``Kraft $F$ (in \,{N})'' zu verwenden. %ISO80000-1:2009 Quantities and units - Part 1: Allgemeines, verfügbar unter https://www.iso.org/obp/ui/#iso:std:iso:80000:-1:ed-1:v1:en.
-
-\item Einheiten werden römisch (aufrecht) gesetzt, nicht kursiv (schräg).
-
-\item Der Abstand zwischen einer Zahl und einer Einheit sollte etwas geringer sein als ein normaler Abstand. In \LaTeX verwenden Sie ``\textbackslash,' um sowohl den korrekten Abstand als auch den korrekten Satz zu gewährleisten. 
-Beispiel: moment $M=\,{3}{N.m}$.%Beachten Sie die Verwendung des "." in diesem Paket, um den entsprechenden Abstand zwischen zwei Einheiten zu erzeugen (zur Kennzeichnung der Multiplikation). Falls Sie sich fragen, warum dies notwendig ist, betrachten Sie den zweideutigen Fall von "3 ms". Heißt das "3 Millisekunden" oder "3 Meter mal Sekunden"? Alternativ kann man auch \cdot verwenden, um explizit zu multiplizieren.
-
-\item Beachten Sie, dass auch Reglerverstärkungen Einheiten haben! Geben Sie diese in der Arbeit an. Das Verständnis der Einheiten hilft Ihnen auch bei der Wahl vernünftiger Verstärkungen während der Abstimmung.
-
-\item Benutzen Sie keinen Operator zwischen Variablen, oder ``$\cdot$'' wenn nötig. Example: $F=ma=\,{3}{kg}\cdot\,{2}{m/s^2}$.
+\item Definieren Sie jede einzelne Variable explizit. Verlassen Sie sich nicht auf ``selbsterklärende'' Indizes wie $x_{\mathrm{max}}$ oder auf den Erfahrungshintergrund des Lesers (z.B. um anzunehmen, dass $I$ ein elektrischer Strom sein muss). Wählen Sie kurze Indizes, lieber einen als mehrere Buchstaben. 
+	\item Benutzen Sie keinen Operator zwischen Variablen, oder ``$\cdot$'' wenn nötig. Example: $F=ma=\,{3}{kg}\cdot\,{2}{m/s^2}$.
 
 \item Beginnen Sie Sätze nicht mit Zahlen oder Variablennamen. Manchmal hilft es, Konstruktionen wie ``Der Parameter $k$'' oder ``Die Variable $x$'' oder ``Ein Wert von 20...'' zu verwenden.
 
 \item Setzen Sie Skalare, Vektoren und Matrizen anders. Beispiel:
-Die Massenmatrix $M M_{\textnormal{r}}(\V{q})$ eines Robotermanipulators ist eine Funktion der verallgemeinerten Koordinaten des Roboters~$\V{q}$.
+Die Massenmatrix $M M_{\textnormal{r}}(V{q})$ eines Robotermanipulators ist eine Funktion der verallgemeinerten Koordinaten des Roboters~$V{q}$.
 %Um dies zu aktivieren, verwenden Sie
 %\newcommand{\V}[1]{\boldsymbol{#1}}%vectors
 %\newcommand{\M}[1]{\mathbf{#1}}%matrices
@@ -108,7 +19,54 @@ Die Massenmatrix $M M_{\textnormal{r}}(\V{q})$ eines Robotermanipulators ist ein
 %\item Make formulae part of sentences. Place full stops when a sentence ends after your equation, or a comma when appropriate. See the above example equation \eqref{eq:derivative}. %Another example: $\V{F}=m \V{a}$, with $m$....
 
 % Example for how to reference an equation: With~(\ref{eq:derivative}), ...
+\end{itemize}
+
+Die Normen \cite{ISOnormunits}\cite{DINGroessen}\cite{DINFormelsatz}\cite{DINGroessen} 
+regeln, welche Buchstaben für Größen und Einheiten zu verwenden und wie Formeln darzustellen sind. Dabei ist auch geregelt, welche Zeichen gerade und welche kursiv zu setzen sowie wo Leerzeichen einzufügen
+sind.
+
+\begin{itemize}
+
+\item Operatoren und gängige mathematische Funktionen werden im Hochformat gesetzt~\cite{RedBook2010}. Besonders häufig wird dies bei dem Differentialoperator oder bei sin und cos falsch gemacht. Beispiel: Die Ableitung der Variablen $x$ nach der Zeit $t$ ist
+\begin{equation}
+\dot{x}=\frac{\d x}{\d t} \, .
+\label{eq:derivative}
+\end{equation}
+\item Die mathematischen Konstanten $\pi$, $e$ und $i$, mathematische Funktionen wie $\sin$, $\cos$, $\tan$, $\lim$, $\ln$, sowie Summen- und Integralzeichen werden gerade gesetzt.
+
+\item Alles, was Text ist, sollte nicht als Variablen gesetzt werden. Dies gilt auch für Indizes von Variablen. Zum Beispiel, für eine Variable $\lambda$ mit dem beabsichtigten Index ``m'', wobei ``m'' eine Abkürzung für ``max'' ist, schreiben Sie $\lambda_{\mathrm{m}}$ und nicht $\lambda_m$.
+\item Beispiel für bezeichnende und variable Indizes
+\item Indizes werden gerade gesetzt, wenn sie die Variable näher bezeichnen. Lediglich variable Indizes werden kursiv gesetzt.
+    \item Variablen und Größen werden kursiv gesetzt
+\item Zahlen und Einheiten werden gerade gesetzt
+\item Zwischen Variable und Einheit steht immer ein Leerzeichen. 
+\item Ausnahme Prozent-Zeichen (\%) kann das Leerzeichen wahlweise stehen oder entfallen.
+\item Ausnahme Bei Winkelbezeichnungen und Gradangaben (°) entfällt das Leerzeichen.
+Beispiele
+
+\item Chemische Formelzeichen und Abkürzungen werden gerade gesetzt.
+\item Einheiten: Es ist ein sehr häufiger Fehler, eckige Klammern um die Einheit zu setzen. Dies ist nach der SI~\cite{SIbrochure2006} und der ISO-Norm~\cite{ISOnormunits} nicht korrekt. Beispiel: Für eine Kraft $F$ ist die korrekte Verwendung des Operators: $[F]=\,{N}$. Für Achsenbeschriftungen in Diagrammen ist die Division wie in ``$F/\,{N}$'' (bevorzugt) oder ``Kraft $F$ (in \,{N})'' zu verwenden. %ISO80000-1:2009 Quantities and units - Part 1: Allgemeines, verfügbar unter https://www.iso.org/obp/ui/#iso:std:iso:80000:-1:ed-1:v1:en.
+\item Die Verwendung von eckigen und geschweiften Klammern in naturwisissenschaftlich- technischen  Texten ist eindeutig geregelt \cite{ISOnormunits}\cite{DINFormelsatz}\cite{DINFormelzeichen}, Diese Regeln sollen auch bei wissenschaftlichen Arbeiten an der HTW berücksichtigt werden. Danach gilt:
+Größe = \{Größe\} · [Größe]
+Dabei bedeuten die eckigen Klammern „Einheit von“ und die geschweiften Klammern
+„Zahlenwert von“.
+
+\item Einheiten werden römisch (aufrecht) gesetzt, nicht kursiv (schräg).
+
+\item Der Abstand zwischen einer Zahl und einer Einheit sollte etwas geringer sein als ein normaler Abstand. In \LaTeX verwenden Sie ``\textbackslash,' um sowohl den korrekten Abstand als auch den korrekten Satz zu gewährleisten. 
+Beispiel: moment $M=\,{3}{N.m}$.%Beachten Sie die Verwendung des "." in diesem Paket, um den entsprechenden Abstand zwischen zwei Einheiten zu erzeugen (zur Kennzeichnung der Multiplikation). Falls Sie sich fragen, warum dies notwendig ist, betrachten Sie den zweideutigen Fall von "3 ms". Heißt das "3 Millisekunden" oder "3 Meter mal Sekunden"? Alternativ kann man auch \cdot verwenden, um explizit zu multiplizieren.
+
+\item Beachten Sie, dass auch Reglerverstärkungen Einheiten haben! Geben Sie diese in der Arbeit an. Das Verständnis der Einheiten hilft Ihnen auch bei der Wahl vernünftiger Verstärkungen während der Abstimmung.
+
+
 
 \end{itemize}
 
 
+\begin{equation}
+\begin{array}{rcl}
+\underline{\dot{x}} & = & A\underline{x} + B\underline{u}\\
+\underline{y} & = & C\underline{x} + D\underline{u}
+\end{array}\,.
+\label{eq:linear}
+\end{equation}
