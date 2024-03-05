@@ -10,10 +10,14 @@
 \fancyhead[L]{\sf Vorlage Abschlussarbeit an der HTW Berlin, H. Brandtstädter, Berlin, Germany, compiled \today, CC BY-SA 3.0 DE} %header left
 \fancyfoot[C]{\thepage} %footer centered
 
+%\usepackage[headsepline,automark]{scrlayer-scrpage}
+%\ohead[{\includegraphics[]{FB1_RE.eps}}]{\includegraphics[width=10pt]{FB1_RE.eps}}
+
 \input{../makro_style}
 \selectlanguage{ngerman}
 
 \pagenumbering{Roman} % Römischen Seitenzahlen
+
 %---------------------
 % Titelseite
 \input{title}
@@ -22,51 +26,45 @@
 %---------------------
 % ggf. Sperrvermerk
 
-%Falls die Arbeit mit einem Sperrvermerk versehen ist, muss auf dem Deckblatt gut sichtbar der Hinweis "Außerhalb des Prüfungsverfahrens unzugänglich" angebracht sein. Alternativ können Sie den Vermerk auch auf einer separaten Seite platzieren, die dann unmittelbar vor oder nach dem Deckblatt einzubinden ist.
-%---------------------
+% Falls die Arbeit mit einem Sperrvermerk versehen ist, muss auf dem Deckblatt gut sichtbar der Hinweis "Außerhalb des Prüfungsverfahrens unzugänglich" angebracht sein. Alternativ können Sie den Vermerk auch auf einer separaten Seite platzieren, die dann unmittelbar vor oder nach dem Deckblatt einzubinden ist.
 \input{sperrvermerk}
-
-
+%---------------------
 
 %---------------------
-%ABSTRACT:
-%---------------------
+% ABSTRACT:
 % Kurze Zusammenfassung, etwa ein Satz pro Abschnitt. 
 \input{abstract}
-
-
-
 \newpage
+%---------------------
 
 %---------------------
 % Vorwort mit Danksagungen
-%---------------------
-%Danken Sie allen, die mit kleineren Ratschlägen oder auf nicht-wissenschaftliche Weise (z. B. technische Unterstützung) beigetragen haben.
-\input{vorwort}
 
+%Danke allen, die mit kleineren Ratschlägen oder auf nicht-wissenschaftliche Weise (z. B. technische Unterstützung) beigetragen haben.
+\input{vorwort}
 \newpage
+%---------------------
 
 %---------------------
 % Inhaltsverzeichnis
-%---------------------
-% Das Inhaltsverzeichnis kann in kurzen Papern wegfallen, 
-% aber dann gut zur Strukturüberwachung beim dchreiben
 \tableofcontents
-
-%---------------------
-%Abkürzungsverzeichnis und Sybolverzeichnis
-%\input{template_thesis_htw/vorlage_thesis/abkuerzung_symbol}
-%---------------------
-
 \newpage
+%---------------------
+
+%---------------------
+% Abkürzungsverzeichnis und Sybolverzeichnis
+\input{template_thesis_htw/vorlage_thesis/abkuerzung_symbole}
+\newpage
+%---------------------
+
 %---------------------
 % Abbildungsverzeichnis und Tabellenverzeichnis
-%---------------------
 \listoffigures 
 \listoftables
-
-
 \newpage
+%---------------------
+
+
 %---------------------
 %---------------------
 % HAUPTTEIL
@@ -75,9 +73,10 @@
 
 %---------------------
 % Einleitung
-%---------------------
 \section{Einleitung}
-%Einleitung (u. a. Einordnung und Detaillierung der Aufgabenstellung State of the Art und Motivation, Erläuterung der Gliederung).
+\label{sec:einleitung}
+%---------------------
+% Einleitung (u.a. Einordnung und Detaillierung der Aufgabenstellung State of the Art und Motivation, Erläuterung der Gliederung).
 \emph{\begin{itemize}
 \item Was ist der Kontext/ die Motivation für deine Arbeit?
 \item Was ist der Stand der Technik? Führe relevante Literatur an.
@@ -86,33 +85,25 @@
 \item Was ist dein neuer Beitrag?
 \item Wie gehst du vor?
 \end{itemize}}
-
 %---------------------
 \input{einleitung}
+%---------------------
 
 %---------------------
 % Methoden
 %---------------------
 \section{Methoden}
 \label{sec:methoden}
-
 \emph{Das Kapitel Methoden ermöglicht es anderen, deine Ergebnisse zu reproduzieren, ohne den Abschnitt Ergebnisse zu lesen. 
 Hier beantwortest du also Fragen wie:
 \begin{itemize}
 \item Wie entwirfst du dein Gerät oder deinen Controller? % Letzteres könnte z. B. in einem Unterabschnitt {Control Design} untergebracht werden.
-\item Wie entwirfst du Experimente oder Simulationen? 
-%Experimentprotokoll
+\item Wie entwirfst du Experimente oder Simulationen? % Experimentprotokoll
 \item Wie sammelst und analysierst du die Daten? % Z.B. \Unterabschnitt{Datenerfassung}, \Unterabschnitt{Datenanalyse}
 \end{itemize}
 Wähle beschreibende Namen für neue Methoden (anstelle von Wörtern wie "Neuheit"), um die Zitierung und künftige Verbesserungen zu vereinfachen.}
-
 %---------------------
-\section*{ Was bedeutet wissenschaftliches Schreiben?}
-\input{writing}
-\input{bildertabs}
-\input{formulas}
-\input{zitieren}
-\input{lizenzen}
+\input{methoden}
 
 %---------------------
 % Ergebnisse
@@ -128,9 +119,8 @@ Geben Sie nur die reinen Fakten an; interpretieren Sie Ihre Ergebnisse noch nich
 
 
 %---------------------
-\input{doku}
-\input{kolloquium}
-\input{datenablage}
+
+\input{ergebnisse}
 
 %---------------------
 % Diskussion
@@ -139,60 +129,47 @@ Geben Sie nur die reinen Fakten an; interpretieren Sie Ihre Ergebnisse noch nich
 \section{Diskussion}
 \label{sec:diskussion}
  \emph{Interpretieren Sie Ihre Ergebnisse. Ist die Leistung akzeptabel? Gehen Sie auf die Ausgangsfragen zurück und vergleichen Sie mit anderen in der Literatur beschriebenen Methoden. Wie erklären Sie unerwartete Ergebnisse? Welche Unzulänglichkeiten oder Einschränkungen weisen Ihre Methoden und Ergebnisse auf? Wo gibt es Raum für Verbesserungen? Könnte eine Kombination mit Methoden aus der Literatur die Arbeit weiter verbessern? Nennen Sie Pläne, Bedürfnisse und Empfehlungen für die zukünftige Forschung. Dies kann auch in einem separaten Unterabschnitt ``Zukünftige Arbeiten'' erfolgen.}
-
 %---------------------
-\input{bewertung}
+\input{diskussion}
+%---------------------
 
 %---------------------
 % Fazit
 %---------------------
-
 \section{Fazit}
 \label{sec:fazit}
-\emph{
-Dies ist keine Zusammenfassung. Hier steht, was das Paper bringt.}
+\emph{Dies ist keine Zusammenfassung. Hier steht, was das Paper bringt.}
+%---------------------
+
 
 %---------------------
 %\input{zusammenfassung}
-%    \item Zusammenfassung: Zusammenstellung und kritische Bewertung der wesentlichen Ergebnisse., Ausblick über Möglichkeiten zur Verbesserung und Weiterarbeit.
-
-
+%\item Zusammenfassung: Zusammenstellung und kritische Bewertung der wesentlichen Ergebnisse., Ausblick über Möglichkeiten zur Verbesserung und Weiterarbeit.
 \newpage
+
+
 %---------------------
 % Literaturverzeichnis
 %---------------------
-%\bibliographystyle{ieeetr}
-%\bibliographystyle{abbrvdin}
-\bibliographystyle{alpha}
+\bibliographystyle{ieeetr}
+%\bibliographystyle{alpha}
 \bibliography{template_thesis_htw/sample}
 %---------------------
 
-
 %---------------------
 %---------------------
-
 
 \newpage
 \appendix
 %---------------------
 % Anhang
 %---------------------
-
-\input{orga}
-\input{latex}
-
-\input{rtlab}
-%\input{tools}
-
-
+\input{anhang}
 
 %---------------------
 % Eidesstattliche Erklärzung
-%---------------------
 \input{eid}
-
-
-
+%---------------------
 
 \end{document}
 
