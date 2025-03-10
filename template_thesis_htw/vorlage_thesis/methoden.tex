@@ -1,3 +1,13 @@
+\emph{Das Kapitel Methoden ermöglicht es anderen, deine Ergebnisse zu reproduzieren, ohne den Abschnitt Ergebnisse zu lesen. 
+Hier beantwortest du also Fragen wie:
+\begin{itemize}
+\item Wie entwirfst du dein Gerät oder deinen Controller? % Letzteres könnte z. B. in einem Unterabschnitt {Control Design} untergebracht werden.
+\item Wie entwirfst du Experimente oder Simulationen? % Experimentprotokoll
+\item Wie sammelst und analysierst du die Daten? % Z.B. \Unterabschnitt{Datenerfassung}, \Unterabschnitt{Datenanalyse}
+\end{itemize}
+Wähle beschreibende Namen für neue Methoden (anstelle von Wörtern wie "Neuheit"), um die Zitierung und künftige Verbesserungen zu vereinfachen.}
+
+%--------------------------------------------------------
 \section*{ Was bedeutet wissenschaftliches Schreiben?}
 
 Wissenschaftliches Schreiben vermittelt \cite{simbeck_etal}
@@ -59,7 +69,14 @@ Eigene Abbildungen können durch Fotos, durch echtes Texen, durch eigenhändiges
 \caption[Boxplot]{Diese Abbildung zeigt eine Matlab-Darstellung, exportiert nach eps Force $F$ für die Bedingungen $A$, $B$, und $C$. {Beispiele für korrekte Achsenbeschriftungen, Beispiel für formal falsche Achsenbeschriftung}}
 \label{fig:boxplot}
 \end{figure}
- 
+
+ \begin{figure}
+    \centering
+    \input{template_thesis_htw/vorlage_thesis/PGF/vergleich_sim_real_pgfplot}
+    \caption{Vergleich simulations- mit realem Verhalten}
+    \label{fig: Vergleich Simulation mit realem verhalten}
+\end{figure}
+
     \item Beim Zeichnen von Blockdiagrammen ist die IEC-Notation~\cite{IECControltech} zu verwenden. Beispiele: Kreise für Summenpunkte verwenden, Vorzeichen an der rechten Seite der eingehenden Aktionslinien positionieren, Punkte für Verzweigungspunkte verwenden, rechteckige Blöcke verwenden.
     \item Zeichnungen sind unter Verwendung genormter Schaltzeichen, Bildzeichen und Symbole anzufertigen und zu beschriften. Zeichenblätter, deren Format größer als DIN~A4 ist, sind gefaltet dem Text beizuheften oder beizulegen.
 \end{itemize}

@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper,oneside]{scrartcl}
 
 \input{../makro_header}
-%\input{../format_thesis}
+\input{../format_thesis}
 
 
 \begin{document}
@@ -21,27 +21,29 @@
 %---------------------
 % Titelseite
 \input{title}
+\input{00_title_student}
 %---------------------
 
 %---------------------
 % ggf. Sperrvermerk
-
 % Falls die Arbeit mit einem Sperrvermerk versehen ist, muss auf dem Deckblatt gut sichtbar der Hinweis "Außerhalb des Prüfungsverfahrens unzugänglich" angebracht sein. Alternativ können Sie den Vermerk auch auf einer separaten Seite platzieren, die dann unmittelbar vor oder nach dem Deckblatt einzubinden ist.
 \input{sperrvermerk}
+\newpage
 %---------------------
 
 %---------------------
 % ABSTRACT:
 % Kurze Zusammenfassung, etwa ein Satz pro Abschnitt. 
 \input{abstract}
+%\input{template_thesis_htw/vorlage_thesis/00_abstract_student}
 \newpage
 %---------------------
 
 %---------------------
 % Vorwort mit Danksagungen
-
 %Danke allen, die mit kleineren Ratschlägen oder auf nicht-wissenschaftliche Weise (z. B. technische Unterstützung) beigetragen haben.
 \input{vorwort}
+%\input{template_thesis_htw/vorlage_thesis/00_vorwort_student}
 \newpage
 %---------------------
 
@@ -73,20 +75,11 @@
 
 %---------------------
 % Einleitung
+%---------------------
 \section{Einleitung}
 \label{sec:einleitung}
-%---------------------
-% Einleitung (u.a. Einordnung und Detaillierung der Aufgabenstellung State of the Art und Motivation, Erläuterung der Gliederung).
-\emph{\begin{itemize}
-\item Was ist der Kontext/ die Motivation für deine Arbeit?
-\item Was ist der Stand der Technik? Führe relevante Literatur an.
-\item Was fehlt in der Literatur? 
-\item Wie lautet die Forschungsfrage?
-\item Was ist dein neuer Beitrag?
-\item Wie gehst du vor?
-\end{itemize}}
-%---------------------
 \input{einleitung}
+%\input{template_thesis_htw/vorlage_thesis/00_einleitung_student}
 %---------------------
 
 %---------------------
@@ -94,43 +87,26 @@
 %---------------------
 \section{Methoden}
 \label{sec:methoden}
-\emph{Das Kapitel Methoden ermöglicht es anderen, deine Ergebnisse zu reproduzieren, ohne den Abschnitt Ergebnisse zu lesen. 
-Hier beantwortest du also Fragen wie:
-\begin{itemize}
-\item Wie entwirfst du dein Gerät oder deinen Controller? % Letzteres könnte z. B. in einem Unterabschnitt {Control Design} untergebracht werden.
-\item Wie entwirfst du Experimente oder Simulationen? % Experimentprotokoll
-\item Wie sammelst und analysierst du die Daten? % Z.B. \Unterabschnitt{Datenerfassung}, \Unterabschnitt{Datenanalyse}
-\end{itemize}
-Wähle beschreibende Namen für neue Methoden (anstelle von Wörtern wie "Neuheit"), um die Zitierung und künftige Verbesserungen zu vereinfachen.}
-%---------------------
 \input{methoden}
+%\input{template_thesis_htw/vorlage_thesis/00_methoden_student}
+%---------------------
 
 %---------------------
 % Ergebnisse
 %---------------------
 \section{Ergebnisse}
 \label{sec:ergebnisse}
-
-\emph{Machen Sie quantitative Angaben und veranschaulichen Sie diese mit Diagrammen. 
-\\
-Geben Sie im Abschnitt Ergebnisse keine zusätzlichen Informationen zu Ihren Methoden an (z. B. die Methode zur Auswahl der Parameter oder das Versuchsprotokoll). 
-\\
-Geben Sie nur die reinen Fakten an; interpretieren Sie Ihre Ergebnisse noch nicht. Das heißt, keine Sätze wie: "Die verbesserte Leistung zeigt, dass der Controller effektiv ist..." oder "Ein wahrscheinlicher Grund für diese Beobachtung ist ...".}
-
-
-%---------------------
-
 \input{ergebnisse}
+%\input{template_thesis_htw/vorlage_thesis/00_einleitung_student}
+%---------------------
 
 %---------------------
 % Diskussion
 %---------------------
-
 \section{Diskussion}
 \label{sec:diskussion}
- \emph{Interpretieren Sie Ihre Ergebnisse. Ist die Leistung akzeptabel? Gehen Sie auf die Ausgangsfragen zurück und vergleichen Sie mit anderen in der Literatur beschriebenen Methoden. Wie erklären Sie unerwartete Ergebnisse? Welche Unzulänglichkeiten oder Einschränkungen weisen Ihre Methoden und Ergebnisse auf? Wo gibt es Raum für Verbesserungen? Könnte eine Kombination mit Methoden aus der Literatur die Arbeit weiter verbessern? Nennen Sie Pläne, Bedürfnisse und Empfehlungen für die zukünftige Forschung. Dies kann auch in einem separaten Unterabschnitt ``Zukünftige Arbeiten'' erfolgen.}
-%---------------------
 \input{diskussion}
+%\input{template_thesis_htw/vorlage_thesis/00_discussion_student}
 %---------------------
 
 %---------------------
@@ -138,15 +114,17 @@ Geben Sie nur die reinen Fakten an; interpretieren Sie Ihre Ergebnisse noch nich
 %---------------------
 \section{Fazit}
 \label{sec:fazit}
-\emph{Dies ist keine Zusammenfassung. Hier steht, was das Paper bringt.}
+\input{fazit}
+%\input{template_thesis_htw/vorlage_thesis/00_fazit_student}
 %---------------------
 
-
 %---------------------
-%\input{zusammenfassung}
-%\item Zusammenfassung: Zusammenstellung und kritische Bewertung der wesentlichen Ergebnisse., Ausblick über Möglichkeiten zur Verbesserung und Weiterarbeit.
+% Zusammenfassung
+%---------------------
+\input{zusammenfassung}
+%\input{template_thesis_htw/vorlage_thesis/00_zusammenfassung_student}
 \newpage
-
+%---------------------
 
 %---------------------
 % Literaturverzeichnis
@@ -165,6 +143,8 @@ Geben Sie nur die reinen Fakten an; interpretieren Sie Ihre Ergebnisse noch nich
 % Anhang
 %---------------------
 \input{anhang}
+%\input{template_thesis_htw/vorlage_thesis/00_anhang1_student}
+%---------------------
 
 %---------------------
 % Eidesstattliche Erklärzung
