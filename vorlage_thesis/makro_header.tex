@@ -2,10 +2,13 @@
 %Heide Brandtstaedter, h.brandtstaedter@htw-berlin.de
 %13.7.2010, Berlin. Last update June 2022, Delft.
 %Be careful:  Some packages may be outdated.
-
+%Überarbeitung April 25 HB
 
 \usepackage{amsmath, amssymb, amsfonts}   %LATEX-Mathematik-Formatierungen 
+
+
 \usepackage{url, hyperref}  %für Hyperlinks, Inernet-Adressen im Literaturverzeichnis zitieren
+\hypersetup{ colorlinks=true, linkcolor=blue} 
 
 %Sprachpakete deutsch
 \usepackage[T1]{fontenc}	%automatische Silbentrennung  
@@ -28,19 +31,8 @@
 
 \usepackage{empheq}       % Hervorhebung von Gleichungen, Teil vom Bündel »mathtools«
 
-%für extra schmale Abstände in Überschriften in den Übungsblätter:
-%\usepackage{titlesec}
-
 %für Zitierstyles
 %\usepackage[authoryear]{natbib}
-
-%%%%%%%%%%%%%%%%%%%
-%ggf von NIS
-%\usepackage{tikz}
-%\usetikzlibrary{arrows}
-%\usepackage{placeins}
-%\definecolor{schrift}{cmyk}{.4,1,1,0}
-%%%%%%%%%%%%%%%%%%%%%%
 
 %von Heike
 %if you want to put several images into one figure:
@@ -51,9 +43,9 @@
 
 % Formatierung fuer HTW Thesis
 %\documentclass[11pt,a4paper,oneside]{scrartcl}
-\usepackage[left=2.5cm,right=2.5cm,top=2.0cm,bottom=2.5cm]{geometry}%Einstellungen der Seitenränder		
+\usepackage[left=2.5cm,right=2.5cm,top=2.0cm,bottom=2cm]{geometry}%Einstellungen der Seitenränder		
 \usepackage{setspace}				%Zeilenabstände
-\usepackage[bottom,hang]{footmisc}	%Formatierung Fußnoten
+
 
 %PGF Plots!
 \usepackage{pgfplots}
@@ -67,13 +59,14 @@
 \usepackage{multirow}%verbundene Zellen und Spalten
 \usepackage{booktabs}%verbesserte Optik von Tabellen (midrule, toprule, etc)
 
-%some formatting changes to move header and footer position manually to the right spot:
-\usepackage{fancyhdr}
-\renewcommand{\headrulewidth}{0pt}%potential line between header and body
-\addtolength{\headheight}{1.2 cm}%more space for header
-\addtolength{\headsep}{-.3 cm}%pull body up
-\addtolength{\footskip}{-.5 cm}%pull footer up
-%see the doc1ument https://tobi.oetiker.ch/lshort/lshort.pdf, page 115 for definition of main formatting variables
+% Keine Indents (Einzüge) global:
+%\setlength{\parindent}{0pt}
 
-% Keine Indents global:
-\setlength{\parindent}{0pt}
+% Länge des automatischen Einzugs bei neuen Absätzen 
+%\parindent 0cm																							
+% Zeilenabstand
+%\onehalfspacing		% 1,5-fachen Zeilenabstand
+\addtolength{\footskip}{-6mm}
+
+%Kopf- und Fusszeilen
+\usepackage[headsepline]{scrlayer-scrpage}

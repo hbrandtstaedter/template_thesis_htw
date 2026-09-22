@@ -7,11 +7,13 @@
 		grid,
 		width=12cm,
 		height=5cm,
-		xmin=0.5,
+        ymin=10,
+        ymax=30,
+		xmin=0,
         xmax=5,
 		legend pos=outer north east,]
-		\addplot table[col sep=comma,y=y1]{template_thesis_htw/vorlage_thesis/PGF/vergleich_sim_real_data.txt};
-		\addplot table[col sep=comma,y=y2]{template_thesis_htw/vorlage_thesis/PGF/vergleich_sim_real_data.txt};
+		\addplot table[col sep=comma,y=y1]{PGF/vergleich_sim_real_data.txt};
+		\addplot table[col sep=comma,y=y2]{PGF/vergleich_sim_real_data.txt};
 		\legend{Real, Simulation}
 	\end{axis}
 \end{tikzpicture}

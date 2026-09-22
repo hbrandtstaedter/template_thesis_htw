@@ -1,49 +1,42 @@
-\documentclass[12pt,a4paper,oneside]{scrartcl}
+\documentclass[12pt,a4paper,twoside]{scrartcl}
 
-\input{../makro_header}
-\input{../format_thesis}
-
+\input{vorlage_thesis/makro_header} %Einbindung diverser Pakete
 
 \begin{document}
 
-%\fancyhf{} %clean header and footer
-\fancyhead[L]{\sf Vorlage Abschlussarbeit an der HTW Berlin, H. Brandtstädter, Berlin, Germany, compiled \today, CC BY-SA 3.0 DE} %header left
-\fancyfoot[C]{\thepage} %footer centered
+\input{vorlage_thesis/makro_style} %Stilistische Shortcuts
 
-%\usepackage[headsepline,automark]{scrlayer-scrpage}
-%\ohead[{\includegraphics[]{FB1_RE.eps}}]{\includegraphics[width=10pt]{FB1_RE.eps}}
-
-\input{../makro_style}
-\selectlanguage{ngerman}
-
+\selectlanguage{ngerman} %Umlaute und so
 \pagenumbering{Roman} % Römischen Seitenzahlen
+
+\ohead[]{\footnotesize H. Brandtstädter, last compiled \today, CC BY-SA 3.0 DE}
 
 %---------------------
 % Titelseite
-\input{title}
-\input{00_title_student}
+\input{01_title_HB}
+%\input{01_title_student}
 %---------------------
 
 %---------------------
 % ggf. Sperrvermerk
 % Falls die Arbeit mit einem Sperrvermerk versehen ist, muss auf dem Deckblatt gut sichtbar der Hinweis "Außerhalb des Prüfungsverfahrens unzugänglich" angebracht sein. Alternativ können Sie den Vermerk auch auf einer separaten Seite platzieren, die dann unmittelbar vor oder nach dem Deckblatt einzubinden ist.
-\input{sperrvermerk}
+\input{01a_sperrvermerk}
 \newpage
 %---------------------
 
 %---------------------
 % ABSTRACT:
 % Kurze Zusammenfassung, etwa ein Satz pro Abschnitt. 
-\input{abstract}
-%\input{template_thesis_htw/vorlage_thesis/00_abstract_student}
+\input{02_abstract_HB}
+%\input{template_thesis_htw/vorlage_thesis/02_abstract_student}
 \newpage
 %---------------------
 
 %---------------------
 % Vorwort mit Danksagungen
 %Danke allen, die mit kleineren Ratschlägen oder auf nicht-wissenschaftliche Weise (z. B. technische Unterstützung) beigetragen haben.
-\input{vorwort}
-%\input{template_thesis_htw/vorlage_thesis/00_vorwort_student}
+\input{03_vorwort_HB}
+%\input{03_vorwort_student}
 \newpage
 %---------------------
 
@@ -55,7 +48,7 @@
 
 %---------------------
 % Abkürzungsverzeichnis und Sybolverzeichnis
-\input{template_thesis_htw/vorlage_thesis/abkuerzung_symbole}
+\input{04_abkuerzung_symbole}
 \newpage
 %---------------------
 
@@ -78,8 +71,8 @@
 %---------------------
 \section{Einleitung}
 \label{sec:einleitung}
-\input{einleitung}
-%\input{template_thesis_htw/vorlage_thesis/00_einleitung_student}
+\input{05_einleitung_HB}
+%\input{05_einleitung_student}
 %---------------------
 
 %---------------------
@@ -87,8 +80,8 @@
 %---------------------
 \section{Methoden}
 \label{sec:methoden}
-\input{methoden}
-%\input{template_thesis_htw/vorlage_thesis/00_methoden_student}
+\input{06_methoden_HB}
+%\input{06_methoden_student}
 %---------------------
 
 %---------------------
@@ -96,8 +89,8 @@
 %---------------------
 \section{Ergebnisse}
 \label{sec:ergebnisse}
-\input{ergebnisse}
-%\input{template_thesis_htw/vorlage_thesis/00_einleitung_student}
+\input{07_ergebnisse_HB}
+%\input{07_einleitung_student}
 %---------------------
 
 %---------------------
@@ -105,8 +98,8 @@
 %---------------------
 \section{Diskussion}
 \label{sec:diskussion}
-\input{diskussion}
-%\input{template_thesis_htw/vorlage_thesis/00_discussion_student}
+\input{08_diskussion_HB}
+%\input{08_discussion_student}
 %---------------------
 
 %---------------------
@@ -114,15 +107,8 @@
 %---------------------
 \section{Fazit}
 \label{sec:fazit}
-\input{fazit}
-%\input{template_thesis_htw/vorlage_thesis/00_fazit_student}
-%---------------------
-
-%---------------------
-% Zusammenfassung
-%---------------------
-\input{zusammenfassung}
-%\input{template_thesis_htw/vorlage_thesis/00_zusammenfassung_student}
+\input{09_fazit_HB}
+%\input{09_fazit_student}
 \newpage
 %---------------------
 
@@ -131,7 +117,7 @@
 %---------------------
 \bibliographystyle{ieeetr}
 %\bibliographystyle{alpha}
-\bibliography{template_thesis_htw/sample}
+\bibliography{sample}
 %---------------------
 
 %---------------------
@@ -142,13 +128,13 @@
 %---------------------
 % Anhang
 %---------------------
-\input{anhang}
-%\input{template_thesis_htw/vorlage_thesis/00_anhang1_student}
+\input{10_anhang_HB}
+%\input{10_anhang_student}
 %---------------------
 
 %---------------------
 % Eidesstattliche Erklärzung
-\input{eid}
+\input{11_eid}
 %---------------------
 
 \end{document}
